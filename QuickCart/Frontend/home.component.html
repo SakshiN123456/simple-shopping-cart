@@ -1,0 +1,33 @@
+<app-navbar [showNavbar]="showNavbar"></app-navbar>
+
+<!-- Hero Section -->
+<div class="hero-section text-center text-white py-5">
+  <div class="container">
+    <h1 class="display-3 fw-bold"><span class="text-warning">Welcome to QuickCart</span> 🛒</h1>
+    <p class="lead fs-4">Your simple, fast & modern online shopping experience.</p>
+  </div>
+</div>
+
+<!-- About Section -->
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <h2 class="text-center mb-4">🚀 About This Project</h2>
+      <p class="fs-5 text-muted text-center mb-5">
+        QuickCart is a modern e-commerce demo built with Angular, showcasing a fully functional shopping cart,
+        dynamic product listing, and responsive design.
+      </p>
+
+      <div class="row g-4">
+        <div class="col-md-6" *ngFor="let feature of features">
+          <div class="p-4 bg-light rounded shadow-sm h-100 hover-shadow">
+            <h5 class="fw-bold text-primary mb-2">
+              <i [class]="feature.icon" class="me-2"></i>{{ feature.title }}
+            </h5>
+            <p class="text-muted mb-0">{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
